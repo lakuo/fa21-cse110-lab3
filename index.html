@@ -1,0 +1,126 @@
+<!-- 
+subtitle for the date
+attendance list
+agenda of what the meeting will cover
+things that were unfinished business from last meeting
+things that are new business that need to be talked about
+any miscellaneous comments / questions / concerns that anyone would like to bring up
+pictures of any diagrams / architecture / things that were presented
+SWE meetings often have people diagram things on a whiteboard so we want those captured as well
+For the following two, you can simply take a 30 second pretend audio recording & video recording to use, we are just
+trying to get you familiar with the <audio> and <video> elements. Yes, you must have both audio and video elements, and
+        yes, you can use the audio from the video you took for the audio element, it just has to be in a separate audio
+        file.
+        audio recording the meeting
+        video recording of the meeting -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Laurence's HTML Playground</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="a place to test out different HTML features :)">
+    <meta name="author" content="Laurence Kuo">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        Header!
+    </header>
+
+    <main>
+        <h1>Pomodoro Meeting Minute</h1>
+        <p>October 1, 2021</p>
+        <details>
+            <summary>Attendance:</summary>
+            <li>Bob</li>
+            <li>John</li>
+            <li>Richard</li>
+            <li>James</li>
+        </details>
+
+        <h2>Brainstorming</h2>
+        <p>Ideas:</p>
+        <li>
+            <img src="https://pomofocus.io/images/ogimage.png" width="500">
+        </li>
+        <li>Color: Green <i>(Promotes Concentration?)</i></li>
+
+        <div>
+            <h3>Check-Ins</h3>
+            <ul>Bob: <strong>"Slack"</strong> off </ul>
+            <ul>John: Complete ADR</ul>
+            <ul>Richard: Code sprint</ul>
+            <ul>James: Meet with TA</ul>
+
+            <h3>Documentation</h3>
+            <b>(To be completed by John)</b>
+        </div>
+
+        <section>
+            <h3>Design Discussed:</h3>
+            <picture>
+                <source media="(max-width:200px)" srcset="diagram.png">
+                <img src="diagram.png" alt="UML" width="200">
+            </picture>
+        </section>
+
+        <hr>
+        <aside>
+            <h4>Meeting Recordings:</h4>
+            <ol>
+                <li><audio controls>
+                        <source src="dummy.mp3" type="audio/mp3">
+                    </audio></li>
+                <li><video width="320" height="240" controls>
+                        <source src="dummy.mp4" type="video/mp4">
+                    </video></li>
+            </ol>
+        </aside>
+
+        <h3>Contact Team Leader:</h3>
+        <form>
+            <fieldset>
+                <legend>Name:</legend>
+                <input type="text" name="name"><br>
+            </fieldset>
+            <fieldset>
+                <legend>Gender</legend>
+                <p><label class="choice"> <input type="radio" name="gender"> Male </label></p>
+                <p><label class="choice"> <input type="radio" name="gender"> Female </label></p>
+                <p><label class="choice"> <input type="radio" name="gender"> Bruh </label></p>
+            </fieldset>
+            <fieldset>
+                <legend>Contact Type</legend>
+                <p><label class="choice"> <input type="checkbox" name="type"> Questions </label></p>
+                <p><label class="choice"> <input type="checkbox" name="type"> Comments </label></p>
+                <p><label class="choice"> <input type="checkbox" name="type"> Concerns </label></p>
+            </fieldset>
+            <label>Message:</label><br>
+            <textarea rows="4" cols="50"></textarea><br>
+
+            <label>Message for:</label>
+            <input list="recipient" />
+
+            <datalist id="recipient">
+                <option value="TA">
+                <option value="Team Leader">
+                <option value="Professor">
+                <option value="Mentor">
+                <option value="Jesus our lord and savior">
+            </datalist>
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+    </main>
+
+    <footer>
+        <p>©2020 Laurence</p>
+    </footer>
+</body>
+
+</html>
